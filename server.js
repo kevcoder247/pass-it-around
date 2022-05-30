@@ -7,10 +7,13 @@ const port = 3000;
 
 app.get('/', (req, res) => {
     res.send(`<h1>99 Bottles of beer on the wall</h1> </br>
-    <a href="/98">take one down and pass it around</a> `)
+    <a href="/98">take one down and pass it around =></a> `)
 })
 
-
+//Route that takes Parameter and checks if the number of beers left is greater than 0
+app.get('/:beersLeft', (req, res) => {
+   res.send('hello')
+})
 
 
 app.listen(port, () => {
